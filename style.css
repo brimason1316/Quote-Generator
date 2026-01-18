@@ -10,7 +10,7 @@ body{
 
 .card{
   width: min(680px, 100%);
-  background: #fff;
+  background: #00ddff;
   border-radius: 18px;
   padding: 24px;
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
