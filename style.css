@@ -2,42 +2,59 @@ html, body {
   height: 100%;
 }
 
-
 body{
   font-family: "Quicksand", sans-serif;
-  min-height: 100vh;
-  height: 100vh;
   margin: 0;
-  display: grid;
-  place-items: center;
-  padding: 24px;
+
+  /* Better centering behavior in small Notion embeds */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Responsive padding so it doesn't look "top heavy" when small */
+  padding: clamp(8px, 3vh, 24px);
+
   background: linear-gradient(297deg, rgba(68, 213, 252, 1) 0%, rgba(145, 255, 156, 1) 100%);
-  /*background: linear-gradient(150deg, #ccfbf1, #cffafe);*/
   overflow: hidden;
 }
 
-
 .card{
   width: min(680px, 100%);
+
+  /* Ensures the card fits inside short embeds */
+  max-height: calc(100vh - 2 * clamp(8px, 3vh, 24px));
+
   background: white;
   border-radius: 18px;
-  padding: 24px;
+  padding: clamp(16px, 3vh, 24px);
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+  /* Key: lets the inside shrink so centering stays true */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
 }
 
 h1{ 
-  margin: 0 0 12px; 
+  margin: 0;
   font-family: "Ribeye Marrow", sans-serif;
 }
 
 blockquote{
   font-size: 1.35rem;
   line-height: 1.5;
-  margin: 16px 0 8px;
+  margin: 0;
+
+  /* Key: quote becomes flexible + scrolls internally if needed */
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding-right: 8px;
 }
 
 .author{
-  margin: 0 0 18px;
+  margin: 0;
   opacity: .7;
 }
 
@@ -45,6 +62,7 @@ blockquote{
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-top: 6px;
 }
 
 button, a{
@@ -58,4 +76,11 @@ button, a{
   text-decoration: none;
 }
 
-button:active{ transform: translateY(1px); }
+button:active, a:active{ transform: translateY(1px); }
+
+/* Helps everything look good in very short Notion embed heights */
+@media (max-height: 520px) {
+  .card { padding: 14px; }
+  blockquote { font-size: 1.1rem; }
+  button, a { padding: 9px 12px; }
+}
