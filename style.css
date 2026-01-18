@@ -6,12 +6,12 @@ body{
   font-family: "Quicksand", sans-serif;
   margin: 0;
 
-  /* Better centering in Notion embeds */
+  /* Centering for Notion embeds */
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* This is the key: padding shrinks when the embed is short */
+  /* Padding that adapts to embed height */
   padding: clamp(6px, 2.2vh, 18px);
 
   background: #44d5fc;
@@ -37,7 +37,9 @@ body{
   min-height: 0;
 }
 
+/* Title hidden for minimalist look */
 h1{ 
+  display: none;
   margin: 0;
   font-family: "Ribeye Marrow", sans-serif;
 }
@@ -58,28 +60,55 @@ blockquote{
   opacity: .7;
 }
 
+/* ----- MINIMALIST BUTTON AREA ----- */
 .buttons{
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
   margin-top: 6px;
 }
 
-button, a{
-  border: 0;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-weight: 650;
-  background: #111827;
-  color: #fff;
+/* Base subtle button style */
+button{
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.18);
+  color: rgba(0,0,0,.55);
+
   cursor: pointer;
-  text-decoration: none;
+  transition: all .18s ease;
 }
 
-button:active, a:active{ transform: translateY(1px); }
+/* Tiny refresh icon button */
+button.refresh{
+  padding: 6px 10px;
+  font-size: 1rem;
+  font-weight: 700;
+}
 
+/* Almost invisible copy button */
+button.copy{
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  text-transform: lowercase;
+  opacity: .6;
+}
+
+/* Gentle reveal on hover */
+button:hover{
+  background: rgba(255,255,255,0.45);
+  color: rgba(0,0,0,.85);
+  opacity: 1;
+}
+
+/* Small press feedback */
+button:active{
+  transform: translateY(1px);
+}
+
+/* Compact styling for short Notion embeds */
 @media (max-height: 520px) {
   .card { padding: 14px; }
   blockquote { font-size: 1.1rem; }
-  button, a { padding: 9px 12px; }
+  button.refresh, button.copy { padding: 5px 9px; }
 }
