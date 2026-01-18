@@ -80,3 +80,9 @@ button:active, a:active{ transform: translateY(1px); }
   blockquote { font-size: 1.1rem; }
   button, a { padding: 9px 12px; }
 }
+/* Optical centering specifically for Notion embeds */
+@media (max-height: 900px) {
+  .card {
+    transform: translateY(6px);
+  }
+}
