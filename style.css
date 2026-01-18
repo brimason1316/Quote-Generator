@@ -20,8 +20,6 @@ body{
 
 .card{
   width: min(680px, 100%);
-
-  /* Ensures the card fits inside short embeds */
   max-height: calc(100vh - 2 * clamp(8px, 3vh, 24px));
 
   background: white;
@@ -29,11 +27,12 @@ body{
   padding: clamp(16px, 3vh, 24px);
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
 
-  /* Key: lets the inside shrink so centering stays true */
   display: flex;
   flex-direction: column;
   gap: 10px;
   min-height: 0;
+
+  transform: translateY(1vh);   /* tiny optical centering fix */
 }
 
 h1{ 
