@@ -1,6 +1,6 @@
 const quoteEl = document.getElementById("quote");
 const authorEl = document.getElementById("author");
-const shareEl  = document.getElementById("share");
+
 
 function pickRandom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -10,9 +10,6 @@ function renderQuote(q) {
   quoteEl.textContent = `“${q.text}”`;
   authorEl.textContent = q.author ? `— ${q.author}` : "";
 
-  // Share link (Twitter/X intent; you can swap to something else)
-  const shareText = `${q.text}${q.author ? " — " + q.author : ""}`;
-  shareEl.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
 }
 
 function newQuote() {
