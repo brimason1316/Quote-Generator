@@ -2,22 +2,8 @@ html, body {
   height: 100%;
 }
 
-body {
-  font-family: "Quicksand", sans-serif;
-  min-height: 100vh;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  /* responsive padding: shrinks automatically in short embeds */
-  padding: clamp(8px, 3vh, 24px);
-
-  background: linear-gradient(297deg, rgba(68, 213, 252, 1) 0%, rgba(145, 255, 156, 1) 100%);
-  overflow: hidden;
-}
-/*body{
+body{
   font-family: "Quicksand", sans-serif;
   min-height: 100vh;
   height: 100vh;
@@ -25,30 +11,19 @@ body {
   display: grid;
   place-items: center;
   padding: 24px;
-  background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+  background: linear-gradient(297deg, rgba(68, 213, 252, 1) 0%, rgba(145, 255, 156, 1) 100%);
   /*background: linear-gradient(150deg, #ccfbf1, #cffafe);*/
   overflow: hidden;
-}*/
-
-.card {
-  width: min(720px, 100%);
-  max-height: calc(100vh - 2 * clamp(8px, 3vh, 24px));
-  overflow: hidden;
-
-  background: white;
-  border-radius: 22px;
-  padding: clamp(16px, 3vh, 28px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0,0,0,0.08);
 }
 
-/** .card{
+
+.card{
   width: min(680px, 100%);
   background: white;
   border-radius: 18px;
   padding: 24px;
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
-} **/
+}
 
 h1{ 
   margin: 0 0 12px; 
