@@ -14,7 +14,8 @@ body{
   /* This is the key: padding shrinks when the embed is short */
   padding: clamp(6px, 2.2vh, 18px);
 
-  background: linear-gradient(297deg, rgba(68, 213, 252, 1) 0%, rgba(145, 255, 156, 1) 100%);
+  background: #44d5fc;
+  background: radial-gradient(circle, rgba(68, 213, 252, 1) 0%, rgba(145, 255, 156, 1) 100%);
   overflow: hidden;
 }
 
