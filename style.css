@@ -14,8 +14,8 @@ body{
   /* Padding that adapts to embed height */
   padding: clamp(6px, 2.2vh, 18px);
 
-  background: #44d5fc;
-  background: radial-gradient(circle, rgba(68, 213, 252, 1) 0%, rgba(145, 255, 156, 1) 100%);
+  background: #8fe7ff;
+  background: radial-gradient(circle, rgba(143, 231, 255, 1) 0%, rgba(184, 255, 191, 1) 100%);
   overflow: hidden;
 }
 
