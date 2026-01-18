@@ -5,12 +5,12 @@ body{
   display: grid;
   place-items: center;
   padding: 24px;
-  background: #f6f7fb;
+  background: linear-gradient(160deg, #e0f2fe, #ecfeff);
 }
 
 .card{
   width: min(680px, 100%);
-  background: #00ddff;
+  background: white;
   border-radius: 18px;
   padding: 24px;
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
