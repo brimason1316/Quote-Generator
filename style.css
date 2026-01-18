@@ -1,5 +1,23 @@
+html, body {
+  height: 100%;
+}
 
-body{
+body {
+  font-family: "Quicksand", sans-serif;
+  min-height: 100vh;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* responsive padding: shrinks automatically in short embeds */
+  padding: clamp(8px, 3vh, 24px);
+
+  background: linear-gradient(150deg, #ccfbf1, #cffafe);
+  overflow: hidden;
+}
+/*body{
   font-family: "Quicksand", sans-serif;
   min-height: 100vh;
   height: 100vh;
@@ -10,7 +28,7 @@ body{
   background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
   /*background: linear-gradient(150deg, #ccfbf1, #cffafe);*/
   overflow: hidden;
-}
+}*/
 
 .card{
   width: min(680px, 100%);
