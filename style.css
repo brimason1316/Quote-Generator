@@ -1,3 +1,17 @@
+@media (max-height: 700px) {
+  .card {
+    padding: 14px;
+  }
+
+  blockquote {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
 body{
   font-family: "Quicksand", sans-serif;
   min-height: 100vh;
