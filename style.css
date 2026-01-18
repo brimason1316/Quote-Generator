@@ -7,19 +7,19 @@
     font-size: 1.1rem;
   }
 
-  h1 {
-    font-size: 1.2rem;
-  }
+  
 }
 
 body{
   font-family: "Quicksand", sans-serif;
   min-height: 100vh;
+  height: 100vh;
   margin: 0;
   display: grid;
   place-items: center;
   padding: 24px;
   background: linear-gradient(150deg, #ccfbf1, #cffafe);
+  overflow: hidden;
 }
 
 .card{
