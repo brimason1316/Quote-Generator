@@ -34,10 +34,10 @@ body{
   min-height: 0;
 }
 
-h1{ 
+/*h1{ 
   margin: 0;
   font-family: "Ribeye Marrow", sans-serif;
-}
+}*/
 
 blockquote{
   font-size: 1.35rem;
@@ -79,10 +79,4 @@ button:active, a:active{ transform: translateY(1px); }
   .card { padding: 14px; }
   blockquote { font-size: 1.1rem; }
   button, a { padding: 9px 12px; }
-}
-/* Optical centering specifically for Notion embeds */
-@media (max-height: 900px) {
-  .card {
-    transform: translateY(6px);
-  }
 }
