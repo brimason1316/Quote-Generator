@@ -5,7 +5,7 @@ body{
   display: grid;
   place-items: center;
   padding: 24px;
-  background: linear-gradient(160deg, #e0f2fe, #ecfeff);
+  background: linear-gradient(150deg, #ccfbf1, #cffafe);
 }
 
 .card{
@@ -18,7 +18,7 @@ body{
 
 h1{ 
   margin: 0 0 12px; 
-  font-family: "Ribeye Marrow", sans-serif;
+  font-family: "Delius Unicase", sans-serif;
 }
 
 blockquote{
